@@ -1,0 +1,92 @@
+{
+  "_from": "git+https://github.com/QuantEdgeTeam/core.git",
+  "_id": "fin-hypergrid@3.3.4",
+  "_inBundle": false,
+  "_integrity": "",
+  "_location": "/fin-hypergrid",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "git",
+    "raw": "fin-hypergrid@git+https://github.com/QuantEdgeTeam/core.git",
+    "name": "fin-hypergrid",
+    "escapedName": "fin-hypergrid",
+    "rawSpec": "git+https://github.com/QuantEdgeTeam/core.git",
+    "saveSpec": "git+https://github.com/QuantEdgeTeam/core.git",
+    "fetchSpec": "https://github.com/QuantEdgeTeam/core.git",
+    "gitCommittish": null
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "git+https://github.com/QuantEdgeTeam/core.git#9632cb84f4acae8597bfe96380c0a19112d67b4c",
+  "_spec": "fin-hypergrid@git+https://github.com/QuantEdgeTeam/core.git",
+  "_where": "/Users/qe-mmi-002/workspace/Equix-Website-Prod/Equix-Web-Prod-Build-Prod2",
+  "author": {
+    "name": "Steve Wirts",
+    "url": "https://github.com/stevewirts"
+  },
+  "bugs": {
+    "url": "https://github.com/fin-hypergrid/core/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Jonathan Eiten",
+      "url": "https://github.com/joneit"
+    },
+    {
+      "name": "Dwayne Jones",
+      "url": "https://github.com/dwaynekj"
+    },
+    {
+      "name": "Naveen Michaud-Agrawal",
+      "url": "https://github.com/nmichaud"
+    },
+    {
+      "name": "Hugo Nogueira",
+      "url": "https://github.com/hugoeanogueira"
+    }
+  ],
+  "dependencies": {
+    "datasaur-base": "^3.0.0",
+    "datasaur-local": "^3.0.0",
+    "extend-me": "^2.7.0",
+    "finbars": "git+https://github.com/QuantEdgeTeam/finbars.git",
+    "inject-stylesheet-template": "^1.0.1",
+    "mustache": "^2.3.0",
+    "object-iterators": "1.3.0",
+    "overrider": "^0",
+    "rectangular": "1.0.1",
+    "sparse-boolean-array": "1.0.1",
+    "svg-themer": "^1.1.2",
+    "synonomous": "^2.1.2"
+  },
+  "deprecated": false,
+  "description": "Canvas-based high-performance grid",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-each": "^0.1.1",
+    "gulp-eslint": "^4.0.2",
+    "gulp-footer": "^1.1.1",
+    "gulp-header": "^1.8.2",
+    "gulp-imagine-64": "^2.0.1",
+    "gulp-load-plugins": "^1.1.0",
+    "gulp-mocha": "^6.0.0",
+    "run-sequence": "^1.1.4"
+  },
+  "gitHead": "",
+  "homepage": "https://github.com/fin-hypergrid/core#readme",
+  "keywords": [
+    "spreadsheet",
+    "grid"
+  ],
+  "license": "MIT",
+  "main": "src/Hypergrid",
+  "name": "fin-hypergrid",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fin-hypergrid/core.git"
+  },
+  "version": "3.3.4"
+}
