@@ -270,14 +270,14 @@ var ColumnMoving = Feature.extend('ColumnMoving', {
         }
 
         if (draggedToTheRight) {
-            draggerStartX = visibleColumns[Math.min(max, draggerIndex - doffset)].left;
-            floaterStartX = visibleColumns[Math.min(max, floaterIndex - foffset)].left;
+            draggerStartX = visibleColumns[Math.min(max, draggerIndex - doffset)]?.left || 0;
+            floaterStartX = visibleColumns[Math.min(max, floaterIndex - foffset)]?.left || 0;
 
             grid.renderOverridesCache.dragger.startX = (draggerStartX + floaterWidth) * hdpiratio;
             grid.renderOverridesCache.floater.startX = draggerStartX * hdpiratio;
 
         } else {
-            floaterStartX = visibleColumns[Math.min(max, floaterIndex - foffset)].left;
+            floaterStartX = visibleColumns[Math.min(max, floaterIndex - foffset)]?.left || 0;
             draggerStartX = floaterStartX + draggerWidth;
 
             grid.renderOverridesCache.dragger.startX = floaterStartX * hdpiratio;
@@ -383,7 +383,7 @@ var ColumnMoving = Feature.extend('ColumnMoving', {
         style.borderTop = '1px solid ' + grid.properties.lineColor;
         style.backgroundColor = grid.properties.backgroundColor;
 
-        var startX = grid.renderer.visibleColumns[columnIndex - scrollLeft].left * hdpiRatio;
+        var startX = (grid.renderer.visibleColumns[columnIndex - scrollLeft]?.left || 0) * hdpiRatio;
 
         floatColumnCTX.scale(hdpiRatio, hdpiRatio);
 
@@ -469,7 +469,7 @@ var ColumnMoving = Feature.extend('ColumnMoving', {
         style.width = columnWidth * zoomFactor + 'px'; //Math.round(columnWidth / hdpiRatio) + 'px';
         style.height = colHeight * zoomFactor + 'px'; //Math.round(colHeight / hdpiRatio) + 'px';
 
-        var startX = grid.renderer.visibleColumns[columnIndex - scrollLeft].left * hdpiRatio;
+        var startX = (grid.renderer.visibleColumns[columnIndex - scrollLeft]?.left || 0) * hdpiRatio;
 
         draggerCTX.scale(hdpiRatio, hdpiRatio);
 
@@ -648,7 +648,7 @@ var ColumnMoving = Feature.extend('ColumnMoving', {
         }
 
         var self = this;
-        var startX = grid.renderer.visibleColumns[columnIndex - scrollLeft].left;
+        var startX = grid.renderer.visibleColumns[columnIndex - scrollLeft]?.left || 0;
         var d = dragger;
         var changed = grid.renderOverridesCache.dragger.startIndex !== grid.renderOverridesCache.dragger.columnIndex;
         self.setCrossBrowserProperty(d, 'transition', (self.isWebkit ? '-webkit-' : '') + 'transform ' + columnAnimationTime + 'ms ease, box-shadow ' + columnAnimationTime + 'ms ease');
